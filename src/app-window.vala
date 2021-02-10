@@ -270,7 +270,7 @@ public class AppWindow : Hdy.ApplicationWindow
         else if (this.missing_driver != null)
         {
             status_page.set_title (/* Warning displayed when no drivers are installed but a compatible scanner is detected */
-                                   _("Additional software needed"));
+                                   _("Additional Software Needed"));
             /* Instructions to install driver software */
             status_secondary_label.set_markup (_("You need to <a href=\"install-firmware\">install driver software</a> for your scanner."));
             status_secondary_label.visible = true;
@@ -279,9 +279,9 @@ public class AppWindow : Hdy.ApplicationWindow
         else
         {
             /* Warning displayed when no scanners are detected */
-            status_page.set_title (_("No scanners detected"));
+            status_page.set_title (_("No Scanners Detected"));
             /* Hint to user on why there are no scanners detected */
-            status_secondary_label.set_text (_("Please check your scanner is connected and powered on"));
+            status_secondary_label.set_text (_("Please check your scanner is connected and powered on."));
             status_secondary_label.visible = true;
             device_buttons_box.visible = true;
             device_buttons_box.sensitive = true;
@@ -833,7 +833,7 @@ public class AppWindow : Hdy.ApplicationWindow
     private void scan (ScanOptions options)
     {
         status_page.set_title (/* Label shown when scan started */
-                               _("Contacting scanner…"));
+                               _("Contacting Scanner…"));
         device_buttons_box.visible = true;
         device_buttons_box.sensitive = false;
         start_scan (get_selected_device (), options);
