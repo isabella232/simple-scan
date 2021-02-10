@@ -14,7 +14,7 @@ private const int DEFAULT_TEXT_DPI = 150;
 private const int DEFAULT_PHOTO_DPI = 300;
 
 [GtkTemplate (ui = "/org/gnome/SimpleScan/ui/app-window.ui")]
-public class AppWindow : Gtk.ApplicationWindow
+public class AppWindow : Hdy.ApplicationWindow
 {
     private const GLib.ActionEntry[] action_entries =
     {
@@ -48,7 +48,7 @@ public class AppWindow : Gtk.ApplicationWindow
     private bool user_selected_device;
 
     [GtkChild]
-    private Gtk.HeaderBar header_bar;
+    private Hdy.HeaderBar header_bar;
     [GtkChild]
     private Gtk.Menu page_menu;
     [GtkChild]
