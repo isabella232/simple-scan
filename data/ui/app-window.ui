@@ -730,68 +730,28 @@
             <property name="can_focus">False</property>
             <property name="vexpand">True</property>
             <child>
-              <object class="GtkAlignment">
+              <object class="HdyStatusPage" id="status_page">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="xscale">0</property>
-                <property name="yscale">0</property>
+                <property name="icon_name">org.gnome.SimpleScan-symbolic</property>
                 <child>
                   <object class="GtkBox">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
                     <property name="orientation">vertical</property>
-                    <property name="spacing">10</property>
-                    <child>
-                      <object class="GtkImage">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="has_focus">True</property>
-                        <property name="is_focus">True</property>
-                        <property name="can_default">True</property>
-                        <property name="has_default">True</property>
-                        <property name="opacity">0.5</property>
-                        <property name="pixel_size">120</property>
-                        <property name="icon_name">org.gnome.SimpleScan-symbolic</property>
-                        <property name="icon_size">6</property>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="status_primary_label">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <attributes>
-                          <attribute name="weight" value="bold"/>
-                          <attribute name="scale" value="1.5"/>
-                        </attributes>
-                        <style>
-                          <class name="dim-label"/>
-                        </style>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">1</property>
-                      </packing>
-                    </child>
+                    <property name="spacing">12</property>
                     <child>
                       <object class="GtkLabel" id="status_secondary_label">
-                        <property name="can_focus">False</property>
+                        <property name="visible">False</property>
+                        <property name="wrap">True</property>
+                        <property name="wrap-mode">word-char</property>
+                        <property name="justify">center</property>
+                        <property name="use-markup">True</property>
                         <property name="track_visited_links">False</property>
                         <signal name="activate-link" handler="status_label_activate_link_cb" swapped="no"/>
                         <style>
-                          <class name="dim-label"/>
+                          <class name="body"/>
+                          <class name="description"/>
                         </style>
                       </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">2</property>
-                      </packing>
                     </child>
                     <child>
                       <object class="GtkBox" id="device_buttons_box">
