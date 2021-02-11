@@ -1845,8 +1845,10 @@ public class AppWindow : Hdy.ApplicationWindow
     private void load ()
     {
         preferences_dialog = new PreferencesDialog (settings);
-        preferences_dialog.delete_event.connect (() => { return true; });
-        preferences_dialog.response.connect (() => { preferences_dialog.visible = false; });
+        preferences_dialog.delete_event.connect (() => {
+            preferences_dialog.visible = false;
+            return true;
+        });
         preferences_dialog.transient_for = this;
         preferences_dialog.modal = true;
 
