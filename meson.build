@@ -7,6 +7,12 @@ project ('simple-scan', ['vala', 'c'],
          ],
          meson_version: '>= 0.37.1')
 
+# FIXME Disable --disable-since-check after libhandy 1.2 is released
+add_project_arguments (
+  '--disable-since-check',
+  language: 'vala'
+)
+
 gnome = import ('gnome')
 i18n = import ('i18n')
 
